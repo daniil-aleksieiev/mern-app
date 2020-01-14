@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { NavLink, useHistory} from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
+import logo from '../images/ds-logo.svg';
 
 export const Navbar = () => {
   const history = useHistory();
@@ -15,7 +16,9 @@ export const Navbar = () => {
   return (
     <nav>
       <div className="nav-wrapper blue darken-1" style={{ padding: '0 2rem'}}>
-        <span className="brand-logo">Logo</span>
+        <a href="https://github.com/daniil-aleksieiev/" target="_blank" className="brand-logo" rel="noopener noreferrer">
+          <img src={logo} alt="ds-logo" />
+        </a>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li><NavLink to="/create">Create</NavLink></li>
           <li><NavLink to="/links">Links</NavLink></li>
