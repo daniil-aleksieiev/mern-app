@@ -17,6 +17,10 @@ export const AuthPage = () => {
     clearError();
   }, [error, message, clearError]);
 
+  useEffect(() => {
+    window.M.updateTextFields();
+  }, [])
+
   const changeHandler = event => {
     setForm({ ...form, [event.target.name]: event.target.value })
   };
@@ -39,7 +43,7 @@ export const AuthPage = () => {
     <div className="row">
       <div className="col s6 offset-s3">
         <h1>Shorten link</h1>
-        <div className="card blue darken-1">
+        <div className="card light-blue">
           <div className="card-content white-text">
             <span className="card-title">Login</span>
             <div>
@@ -72,7 +76,7 @@ export const AuthPage = () => {
           </div>
           <div className="card-action">
             <button
-              className="btn yellow darken-4"
+              className="btn yellow darken-4 waves-effect waves-light"
               style={{marginRight: 10}}
               onClick={loginHandler}
               disabled={loading}
@@ -80,7 +84,7 @@ export const AuthPage = () => {
               Enter
             </button>
             <button
-              className="btn grey lighten-1 black-text"
+              className="btn grey lighten-1 black-text waves-effect waves-light"
               onClick={registerHandler}
               disabled={loading}
             >
