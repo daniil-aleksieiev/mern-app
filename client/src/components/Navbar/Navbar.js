@@ -24,9 +24,9 @@ const Navbar = () => {
         <a href="https://github.com/daniil-aleksieiev/" target="_blank" className="brand-logo" rel="noopener noreferrer">
           <Logo />
         </a>
-        <ul id="nav-mobile" className="right hide-on-med-and-down">
-          <li><NavLink to="/create">Create</NavLink></li>
-          <li><NavLink to="/links">Links</NavLink></li>
+        <ul id="nav-mobile" className="navigation right hide-on-med-and-down">
+          <li><NavLink to="/create" className="navigation__link" activeClassName="navigation__link--active">Create</NavLink></li>
+          <li><NavLink to="/links" className="navigation__link" activeClassName="navigation__link--active">Links</NavLink></li>
           <li><a href="/" onClick={logoutHandler}>Logout <FontAwesomeIcon icon={faSignOutAlt} /></a></li>
         </ul>
       </div>
