@@ -1,5 +1,6 @@
 {
   "port": 5000,
   "jwtSecret": "daniil mern course",
-  "mongoUri": "mongodb+srv://Daniil:mernskillup@cluster0-nqc1v.azure.mongodb.net/test?retryWrites=true&w=majority"
+  "mongoUri": "mongodb+srv://Daniil:mernskillup@cluster0-nqc1v.azure.mongodb.net/test?retryWrites=true&w=majority",
+  "baseUrl": "https://localhost:5000"
 }

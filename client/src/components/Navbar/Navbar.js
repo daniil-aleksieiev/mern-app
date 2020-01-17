@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
 import { NavLink, useHistory} from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { ReactComponent as Logo } from '../../images/ds-logo.svg';
 
 import './Navbar.scss';
@@ -24,7 +27,7 @@ const Navbar = () => {
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li><NavLink to="/create">Create</NavLink></li>
           <li><NavLink to="/links">Links</NavLink></li>
-          <li><a href="/" onClick={logoutHandler}>Logout</a></li>
+          <li><a href="/" onClick={logoutHandler}>Logout <FontAwesomeIcon icon={faSignOutAlt} /></a></li>
         </ul>
       </div>
     </nav>
